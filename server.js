@@ -4,7 +4,7 @@ var http = require('http'),
 
 http.createServer(function (req, res) {
   res.writeHead(200, {'Content-Type': 'text/html'})
-  res.write("<h1>Hello..." + Math.random()  +"</h1>")
+  res.write("<h1>Squirrels FTW!</h1>")
 
   var db = new mongo.Db('squirrel-node', new mongo.Server("flame.local.mongohq.com", 27024, {}))
   db.open(function(err, db) {
