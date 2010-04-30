@@ -1,6 +1,7 @@
 var http = require('http'),
     port = process.env.PORT || 8001,
-    mongo = require('./vendor/node-mongodb-native/lib/mongodb')
+    sys = require('sys'),
+    mongo = require(process.cwd() + '/vendor/node-mongodb-native/lib/mongodb')
 
 http.createServer(function (req, res) {
   res.writeHead(200, {'Content-Type': 'text/html'})
@@ -25,5 +26,4 @@ http.createServer(function (req, res) {
       })
     })
   })
-
 }).listen(parseInt(port))
